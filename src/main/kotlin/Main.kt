@@ -9,8 +9,8 @@ fun main() {
     var i = 0
     while(i < entrada.length && esValido) {
         when(entrada[i]) {
-            '#' -> resultado += 1
-            '@' -> resultado -= 1
+            '#' -> resultado++
+            '@' -> resultado--
             '*' -> resultado *= resultado
             '&' -> print(resultado)
             else -> {
