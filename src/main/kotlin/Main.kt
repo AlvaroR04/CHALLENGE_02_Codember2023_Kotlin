@@ -1,6 +1,5 @@
 fun main() {
     var resultado = 0
-    var caracterErroneo = ' '
 
     print("Escriba su código aquí: ")
     val entrada = readln()
@@ -14,15 +13,10 @@ fun main() {
             '*' -> resultado *= resultado
             '&' -> print(resultado)
             else -> {
-                caracterErroneo = entrada[i]
                 esValido = false
+                println("El caracter '${entrada[i]}' no es válido")
             }
         }
-
         i++
-    }
-
-    if(!esValido) {
-        println("El caracter '$caracterErroneo' no es válido")
     }
 }
